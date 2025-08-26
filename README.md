@@ -31,8 +31,8 @@ Este sistema tem como objetivo auxiliar o Gerenciamento de Vacinas em Clínicas 
 - 📚 NuGet Packages
 
 ### Banco de Dados 🗄️
-- 🐘 PostgreSQL ou 🐬 MySQL (Pendente de Decisão)
-- 🔌 MySql.Data ou Npgsql (Pendente de Decisão)
+- 🐬 MySQL
+- 🔌 MySql.Data
 
 ### Ferramentas de Desenvolvimento 🛠️
 - 💻 Visual Studio / VS Code
