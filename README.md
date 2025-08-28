@@ -41,6 +41,77 @@ Este sistema tem como objetivo auxiliar o Gerenciamento de Vacinas em Clínicas 
 - 🧬 Git
 - 🐙 GitHub
 
+## Fluxo de Telas
+
+### 1. Login / Autenticação
+- Tela de Login
+  - Usuário + senha
+  - Recuperação de senha
+  - Controle de acesso baseado em permissões (admin, funcionário etc.)
+
+---
+
+### 2. Dashboard (Tela Inicial)
+- Resumo rápido:
+  - Número de clientes cadastrados
+  - Estoque atual de vacinas
+  - Próximas vacinas com validade próxima
+  - Acesso rápido para “Novo Cadastro” (funcionário, cliente, vacina)
+
+---
+
+### 3. Gestão de Funcionários 👨‍💼
+- **Lista de Funcionários**
+  - Busca e filtros
+  - Ações: Editar | Excluir | Detalhes
+- **Cadastro/Edição de Funcionário**
+  - Nome, CPF, contato
+  - Cargo/função
+  - Definição de permissões (admin, atendente, vacinador)
+- **Controle de Permissões**
+  - Tela para atribuir funções
+  - Configuração do que cada perfil pode acessar (CRUD, relatórios, estoque etc.)
+
+---
+
+### 4. Gestão de Clientes 🧑‍💻
+- **Lista de Clientes**
+  - Busca por nome/CPF
+  - Ações: Editar | Excluir | Histórico
+- **Cadastro/Edição de Cliente**
+  - Nome, CPF, data de nascimento, contato
+  - Informações de saúde relevantes (alergias, observações)
+- **Histórico de Vacinas**
+  - Linha do tempo das vacinas aplicadas
+  - Informações: data, lote, validade, profissional responsável
+
+---
+
+### 5. Gestão de Vacinas 💉
+- **Lista de Vacinas**
+  - Nome da vacina, fabricante, quantidade em estoque, validade mais próxima
+  - Ações: Editar | Excluir | Registrar Aplicação
+- **Cadastro/Edição de Vacina**
+  - Nome, fabricante
+  - Descrição (doença alvo, doses necessárias)
+- **Gestão de Lotes**
+  - Registro de novos lotes
+  - Campos: lote, quantidade, data de fabricação, validade
+- **Aplicação de Vacina**
+  - Seleção do cliente
+  - Seleção da vacina e lote
+  - Atualização automática do estoque
+  - Registro de profissional aplicador
+
+---
+
+### 6. Relatórios (Opcional 📊)
+- Vacinas aplicadas por período
+- Estoque atual e vacinas prestes a vencer
+- Registro de funcionários ativos
+
+---
+
 ## Objetivos / Entregas ✅
 
 - 📝 **Documentação do Projeto**
