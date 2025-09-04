@@ -1,0 +1,52 @@
+
+
++-----------------------+       +-------------------+      +-------------------+
+|     Funcionario       |       |      Cliente      |      |       Vacina      |
++-----------------------+       +-------------------+      +-------------------+
+| - id_funcionario      |       | - id_cliente      |      | - id_vacina       |
+| - nome                |       | - nome            |      | - nome            |
+| - cpf                 |       | - cpf             |      | - fabricante      |
+| - email               |       | - data_nascimento |      | - descricao       |
+| - telefone            |       | - alergias        |      | - doses_necessarias|
+| - cargo               |       | - observacoes     |      | - intervalo_doses |
+| - senha_hash          |       | - status          |      | - status          |
+| - permissoes          |       +-------------------+      +-------------------+
++-----------------------+               |                         |
+         |                               |                         |
+         |                               |                         |
+         |                               v                         v
++-----------------------+       +-------------------+      +-------------------+
+|      Agendamento      |       | AgendamentoRealizado |    |  AgendamentoPerdido |
++-----------------------+       +-------------------+      +-------------------+
+| - id_agendamento      |       | - id_agendamento_realizado | - id_agendamento_perdido |
+| - id_cliente          |       | - id_agendamento      | - id_agendamento        |
+| - id_vacina           |       | - data_realizacao    | - data_perda            |
+| - data_agendada       |       | - id_funcionario     | - motivo_perda          |
+| - id_funcionario      |       | - id_vacina          | - observacoes           |
+| - status_agendamento  |       | - id_lote            |                         |
+| - observacoes         |       | - dose               |                         |
++-----------------------+       | - status_aplicacao   |                         |
+                                 | - observacoes        |                         |
+                                 +-------------------+                         |
+
++-----------------------+
+|       Lote            |
++-----------------------+
+| - id_lote             |
+| - id_vacina           |
+| - numero_lote         |
+| - quantidade          |
+| - data_fabricacao     |
+| - data_validade       |
+| - status              |
++-----------------------+
+
++-----------------------+
+|       Estoque         |
++-----------------------+
+| - id_estoque          |
+| - id_vacina           |
+| - quantidade_estoque  |
+| - quantidade_minima   |
+| - data_entrada        |
++-----------------------+
