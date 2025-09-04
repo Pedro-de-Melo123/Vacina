@@ -5,6 +5,10 @@ Este sistema tem como objetivo auxiliar o Gerenciamento de Vacinas em Clínicas 
 
 ## Funcionalidades 🛠️
 
+- **Logins**:
+  - Adiministrador
+  - Clinicas / Acesso em Computador Público
+  - Login será gerado por nós e distribuido para o cliente.
 - **Cadastrar**:
   - 👨‍💼 Funcionários
   - 🧑‍💻 Clientes
