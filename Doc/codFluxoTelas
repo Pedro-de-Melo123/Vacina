@@ -1,0 +1,61 @@
+graph TD
+    A[Tela de Login] --> B{Tipo de Usuário?};
+
+    B -- ADM --> C[Painel ADM];
+    B -- Clínica --> D[Painel da Clínica];
+    B -- Normal --> E[Painel Normal];
+
+    subgraph Painel ADM
+        C --> C1[Gerenciar Funcionários];
+        C --> C2[Gerenciar Clientes];
+        C --> C3[Gerenciar Vacinas/Estoque];
+        C --> C4[Gerenciar Aplicações];
+        C --> C5[Relatórios];
+    end
+
+    subgraph Painel da Clínica
+        D --> C2;
+        D --> D3[Gerenciar Vacinas/Estoque];
+        D --> C4;
+        D --> C5;
+        D --> D1[Consultar Funcionários];
+    end
+
+    subgraph Painel Normal
+        E --> C2;
+        E --> D3;
+        E --> C4;
+        E --> D1;
+        E --> E5[Relatórios (Básicos)];
+    end
+
+    subgraph Gerenciar Funcionários
+        C1 --> C1a[Tela de Cadastro];
+        C1 --> C1b[Tela de Edição];
+        C1 --> C1c[Tela de Consulta];
+    end
+
+    subgraph Gerenciar Clientes
+        C2 --> C2a[Tela de Cadastro];
+        C2 --> C2b[Tela de Edição];
+        C2 --> C2c[Tela de Consulta];
+    end
+
+    subgraph Gerenciar Vacinas/Estoque
+        C3 --> C3a[Tela de Cadastro];
+        C3 --> C3b[Tela de Edição (ADM altera preço)];
+        C3 --> C3c[Tela de Consulta];
+        D3 --> C3a;
+        D3 --> D3b[Tela de Edição (Clínica não altera preço)];
+        D3 --> C3c;
+    end
+
+    subgraph Gerenciar Aplicações
+        C4 --> C4a[Tela de Cadastro (Busca Cliente, Funcionário e Vacina)];
+        C4 --> C4b[Tela de Consulta];
+    end
+
+    subgraph Relatórios
+        C5 --> C5a[Tela de Relatórios Detalhados];
+        E5 --> E5a[Tela de Relatórios Básicos];
+    end
