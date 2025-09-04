@@ -1,0 +1,69 @@
+sequenceDiagram
+    participant P as Página de Login
+    participant S as Sistema
+    participant DB as Banco de Dados
+
+    alt Login Clínica
+        C as Clínica
+        C->>P: Acessa a página de login
+        P->>S: Envia credenciais (usuário, senha)
+        S->>DB: Autentica credenciais
+        DB-->>S: Retorna sucesso/falha
+        S-->>P: Retorna status do login
+        P->>C: Redireciona para o Painel da Clínica
+    end
+
+    alt Login ADM
+        ADM as ADM da Clínica
+        ADM->>P: Acessa a página de login
+        P->>S: Envia credenciais
+        S->>DB: Autentica credenciais (com permissão ADM)
+        DB-->>S: Retorna sucesso/falha
+        S-->>P: Retorna status do login
+        P->>ADM: Redireciona para o Painel ADM
+    end
+
+    alt Login Normal
+        UN as Usuário Normal
+        UN->>P: Acessa a página de login
+        P->>S: Envia credenciais
+        S->>DB: Autentica credenciais
+        DB-->>S: Retorna sucesso/falha
+        S-->>P: Retorna status do login
+        P->>UN: Redireciona para o Painel Normal
+    end
+
+    UN->>S: Cadastrar/Consultar Cliente
+    S->>DB: Salva/Busca informações do cliente
+    DB-->>S: Retorna sucesso
+    S-->>UN: Confirmação
+
+    UN->>S: Cadastrar/Consultar Vacina
+    S->>DB: Salva/Busca informações da vacina
+    DB-->>S: Retorna sucesso
+    S-->>UN: Confirmação
+
+    UN->>S: Cadastrar Aplicação
+    S->>DB: Salva informações da aplicação
+    DB-->>S: Retorna sucesso
+    S-->>UN: Confirmação
+
+    UN->>S: Consultar Funcionário
+    S->>DB: Busca informações do funcionário
+    DB-->>S: Retorna informações
+    S-->>UN: Exibe dados
+
+    ADM->>S: Cadastrar/Editar Funcionário
+    S->>DB: Salva/Edita informações do funcionário
+    DB-->>S: Retorna sucesso
+    S-->>ADM: Confirmação
+
+    ADM->>S: Alterar Preço da Vacina
+    S->>DB: Atualiza preço no estoque
+    DB-->>S: Retorna sucesso
+    S-->>ADM: Confirmação
+
+    C->>S: Gerar Relatório
+    S->>DB: Busca dados (clientes, estoque, aplicações)
+    DB-->>S: Retorna dados
+    S-->>C: Apresenta relatório
