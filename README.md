@@ -3,6 +3,10 @@ Repositório de Desenvolvimento e Postagem do Sistema Gerenciador de Vacinas par
 
 Este sistema tem como objetivo auxiliar o Gerenciamento de Vacinas em Clínicas de Vacinação, de forma que seja possível realizar o Controle de Estoque, Agendamentos e Procedimentos. Ao fim deste projeto, pretendemos entregar um sistema plenamente funcional que seja capaz de:
 
+## Documentações
+
+  - Documentação DOCS: https://docs.google.com/document/d/1UCh8Z1X4elksSIUfmjEBOY1lJ7cjVs9ZIxTSDMQVxp0/edit?usp=sharing
+
 ## Funcionalidades 🛠️
 
 - **Logins**:
@@ -119,9 +123,9 @@ Este sistema tem como objetivo auxiliar o Gerenciamento de Vacinas em Clínicas 
 ## Objetivos / Entregas ✅
 
 - 📝 **Documentação do Projeto**
-  - [ ] Criar README detalhado com tecnologias, funcionalidades e instruções
-  - [ ] Elaborar diagrama de fluxo do sistema
-  - [ ] Definir modelagem do banco de dados
+  - [X] Criar README detalhado com tecnologias, funcionalidades e instruções
+  - [X] Elaborar diagrama de fluxo do sistema
+  - [X] Definir modelagem do banco de dados
 
 - 👨‍💼 **Gestão de Funcionários**
   - [ ] Cadastro, edição e exclusão de funcionários
